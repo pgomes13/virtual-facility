@@ -10,6 +10,24 @@
   "monorepo": true,
   "root": "apps/virtual-facility",
   "projects": {
+    "alarms-generator": {
+      "type": "application",
+      "root": "apps/alarms-generator",
+      "entryFile": "main",
+      "sourceRoot": "apps/alarms-generator/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/alarms-generator/tsconfig.app.json"
+      }
+    },
+    "alarms-service": {
+      "type": "application",
+      "root": "apps/alarms-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/alarms-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/alarms-service/tsconfig.app.json"
+      }
+    },
     "virtual-facility": {
       "type": "application",
       "root": "apps/virtual-facility",
