@@ -19,6 +19,15 @@
         "tsConfigPath": "apps/virtual-facility/tsconfig.app.json"
       }
     },
+    "workflows": {
+      "type": "library",
+      "root": "libs/workflows",
+      "entryFile": "index",
+      "sourceRoot": "libs/workflows/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/workflows/tsconfig.lib.json"
+      }
+    },
     "workflows-service": {
       "type": "application",
       "root": "apps/workflows-service",
