@@ -11,7 +11,9 @@ describe('NotificationsServiceController', () => {
       providers: [NotificationsServiceService],
     }).compile();
 
-    notificationsServiceController = app.get<NotificationsServiceController>(NotificationsServiceController);
+    notificationsServiceController = app.get<NotificationsServiceController>(
+      NotificationsServiceController,
+    );
   });
 
   describe('root', () => {

@@ -37,7 +37,7 @@ export class BuildingsService {
     const newBuildingEntity = await this.buildingsRepository.save(building);
 
     // Create a workflow for the new building
-    await this.createWorkflow(newBuildingEntity.id);
+    this.createWorkflow(newBuildingEntity.id);
     return newBuildingEntity;
   }
 

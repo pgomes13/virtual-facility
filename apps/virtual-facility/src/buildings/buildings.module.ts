@@ -12,9 +12,9 @@ import { WORKFLOWS_SERVICE } from '../constants';
     ClientsModule.register([
       {
         name: WORKFLOWS_SERVICE,
-        transport: Transport.NATS,
+        transport: Transport.RMQ,
         options: {
-          servers: process.env.NATS_URL,
+          urls: [process.env.RABBITMQ_URL!],
         },
       },
     ]),

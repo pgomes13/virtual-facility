@@ -11,7 +11,9 @@ describe('AlarmsGeneratorController', () => {
       providers: [AlarmsGeneratorService],
     }).compile();
 
-    alarmsGeneratorController = app.get<AlarmsGeneratorController>(AlarmsGeneratorController);
+    alarmsGeneratorController = app.get<AlarmsGeneratorController>(
+      AlarmsGeneratorController,
+    );
   });
 
   describe('root', () => {
