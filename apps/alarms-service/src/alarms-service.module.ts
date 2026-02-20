@@ -3,6 +3,7 @@ import { AlarmsServiceController } from './alarms-service.controller';
 import { AlarmsServiceService } from './alarms-service.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { NATS_MESSAGE_BROKER, NOTIFICATIONS_SERVICE } from './constants';
+import { TracingModule } from '@app/tracing';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { NATS_MESSAGE_BROKER, NOTIFICATIONS_SERVICE } from './constants';
         },
       },
     ]),
+    TracingModule,
   ],
   controllers: [AlarmsServiceController],
   providers: [AlarmsServiceService],

@@ -46,6 +46,15 @@
         "tsConfigPath": "apps/notifications-service/tsconfig.app.json"
       }
     },
+    "tracing": {
+      "type": "library",
+      "root": "libs/tracing",
+      "entryFile": "index",
+      "sourceRoot": "libs/tracing/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/tracing/tsconfig.lib.json"
+      }
+    },
     "virtual-facility": {
       "type": "application",
       "root": "apps/virtual-facility",
