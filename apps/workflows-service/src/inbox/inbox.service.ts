@@ -21,9 +21,8 @@ export class InboxService {
         },
         take: options.take,
         // While this approach works, it's far from ideal as we'll have 2 nodes running cron jobs that basically do nothing but fail.
-        // This is why we should rather use one of the other approaches mentioned in this lesson instead.
+        // This is why we should rather use https://bullmq.io/.
         lock: {
-          // 👈
           mode: 'pessimistic_write',
           onLocked: 'nowait',
         },

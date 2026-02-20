@@ -26,7 +26,7 @@ export class OutboxProcessor {
    * Also, in the real-world system, we would rather use "@nestjs/bull" instead of "@nestjs/schedule"
    * because it provides more sophisticated features (e.g. locking, supports multiple nodes running in parallel etc.).
    */
-  @Cron(CronExpression.EVERY_10_SECONDS)
+  // @Cron(CronExpression.EVERY_10_SECONDS)
   async processOutboxMessages() {
     this.logger.debug(`Processing outbox messages`);
 

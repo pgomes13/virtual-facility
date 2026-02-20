@@ -43,7 +43,7 @@ export class WorkflowsController {
     }
 
     const channel = context.getChannelRef();
-    channel.ack(message); // 👈
+    channel.ack(message);
   }
 
   @Get()

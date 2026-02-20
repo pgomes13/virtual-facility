@@ -11,7 +11,7 @@ async function bootstrap() {
     {
       transport: Transport.RMQ,
       options: {
-        servers: process.env.RABBITMQ_URL,
+        urls: [process.env.RABBITMQ_URL!],
         queue: 'workflows-service',
         noAck: false,
       },
