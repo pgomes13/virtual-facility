@@ -1,9 +1,12 @@
 import { Controller, Logger } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
+import { TracingLogger } from '@app/tracing/tracing.logger';
 
 @Controller()
 export class AlarmsClassifierServiceController {
-  private readonly logger = new Logger(AlarmsClassifierServiceController.name);
+  // private readonly logger = new Logger(AlarmsClassifierServiceController.name);
+
+  constructor(private readonly logger: TracingLogger) {} // 👈
 
   @MessagePattern('alarm.classify')
   classifyAlarm(@Payload() data: unknown) {

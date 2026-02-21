@@ -6,8 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "engines": {
-	  "node": ">=20.0.0"
-  },  
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
@@ -90,6 +90,7 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
+      "^@app/tracing(|/.*)$": "<rootDir>/libs/tracing/src/$1",
       "^@app/workflows(|/.*)$": "<rootDir>/libs/workflows/src/$1"
     }
   }
